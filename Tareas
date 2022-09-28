@@ -1,0 +1,67 @@
+package actividades.de.clase;
+import java.util.Scanner;
+public class OperacionesACT7 {
+    
+    public static void main (String[] args){
+        
+        //Numeros primos
+        Scanner LimSup = new Scanner (System.in);
+        
+        System.out.println("¿Cuantos numeros primos quieres contar? ");
+        
+        int LimiteInferior = 0;
+        int LimiteSuperior = LimSup.nextInt();
+        
+        for (int i = LimiteInferior; i<=LimiteSuperior; i++){
+            int divisores = 0;
+            for (int j = 1;j <= i/2; j++){
+                if (i%j == 0){
+                    divisores+= 2;
+                }
+                if (divisores>2){
+                    break;
+                }
+            }
+            
+            
+            
+            if (divisores == 2){
+                System.out.println("Los numeros primos son: " +i);
+                //System.out.println(i);
+            };  
+        };
+        
+        
+        
+    
+        //Sucesion de Fibanocci
+        Scanner Fibo = new Scanner (System.in);
+        
+        System.out.println("¿Cuantos numeros de la sucesion de Fibonacci quieres contar? ");
+        
+        int CantidadN = Fibo.nextInt();
+     
+    
+        int tmp1 = 0;
+        int tmp2 = 1;
+        int tmp3;
+    
+        if (CantidadN >= 1){
+            System.out.println(tmp1);
+        };
+    
+        if (CantidadN >= 2){
+            System.out.println(tmp2);
+        };
+    
+        for (int i=3; i <= CantidadN; i++){
+            tmp3 = tmp1 + tmp2;
+            System.out.println(tmp3);
+            tmp1 = tmp2;
+            tmp2 = tmp3;
+    
+        };
+     
+
+    }   
+}
