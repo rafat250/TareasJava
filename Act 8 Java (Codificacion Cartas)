@@ -1,0 +1,25 @@
+package actividades.de.clase;
+
+
+public class Cartas {
+    
+    private int numero;
+    private String palo;
+    
+    public static final String[] Palos={"Treboles","Corazones","Picas","Diamantes"};
+    public static final int LIMITE_CARTA_PALO=12;
+    
+    public Cartas (int numero, String palo){
+        this.numero = numero;
+        this.palo = palo;
+    }
+
+    @Override
+    public String toString() {
+        return "numero=" + numero + ", palo=" + palo;
+    }
+    
+    
+    
+    
+}
