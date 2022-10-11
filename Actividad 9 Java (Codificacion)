@@ -1,0 +1,62 @@
+package actividades.de.clase;
+import java.util.Scanner;
+public class OperacionesAct8___Imprimir_Resultados {
+    
+    public static void main (String [] args) {
+       
+       Scanner OP1 = new Scanner (System.in); 
+       Double Opcion; 
+       Baraja b = new Baraja();
+       Cartas[] c = b.darCartas(5);
+       
+       //showmenu
+       System.out.println("Bienvenido al poker!");
+       System.out.println("Elige una opcion...");
+       System.out.println("Mezclar Deck..........(1)");
+       System.out.println("Sacar una carta..........(2)");
+       System.out.println("Carta al azar..........(3)");
+       System.out.println("Generar una mano de de 5 cartas ..........(4)");
+       System.out.println("¿Que opcion eliges?  ");
+       Opcion = OP1.nextDouble();
+       
+       
+       if (Opcion == 1) {
+           b.barajar();
+           b.mostrarBaraja();   
+       }
+       
+       if (Opcion == 2) {
+           
+           c = b.darCartas(5);
+       
+           for (int i=0;i<c.length;i++) {
+           System.out.println(c[i]);
+           }
+       
+           c = b.darCartas(32);
+       
+           for (int i=0;i<c.length;i++) {
+           System.out.println(c[i]);
+           }  
+           
+            for (int i=0;i<c.length;i++) {
+           System.out.println(c[i]);
+           }
+       }
+       
+       if (Opcion == 3) {
+           System.out.println(b.siguienteCarta());
+           System.out.println(b.cartasDisponible());
+       }
+       
+       if (Opcion == 4) {
+           
+           c = b.darCartas(5);
+       
+           for (int i=0;i<c.length;i++) {
+           System.out.println(c[i]);
+           }   
+        }
+       
+    }
+}
