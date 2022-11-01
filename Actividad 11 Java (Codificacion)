@@ -1,0 +1,166 @@
+package actividades.de.clase;
+import java.util.Scanner;
+
+public class Operaciones_Act11 {
+    public static void main (String[] args){
+       
+        //Datos generales
+        Scanner Op1 = new Scanner (System.in);
+        int Opfig = 0;
+         
+         
+        //Elementos cuadrado
+        Scanner OpCu = new Scanner (System.in);
+        Scanner LadoCu = new Scanner (System.in);
+        int OpCuadrado = 0;
+        int AreaCuadrado = 0;
+        int PerimetroCuadrado = 0;
+        int Lado = 0;
+        int ResultCuadrado = 0;
+        
+        //Elementos circulos
+        Scanner OpCi = new Scanner (System.in);
+        Scanner RadioCi = new Scanner (System.in);
+        int OpCirculo = 0;
+        int Radio = 0;
+        int AreaCirculo = 0;
+        int Circunferencia = 0;
+        int ResultCirculo = 0;
+        
+        
+        
+        //Elementos triangulo 
+        Scanner OpTr = new Scanner (System.in);
+        Scanner BaseTi = new Scanner (System.in);
+        Scanner AlturaTi = new Scanner (System.in);
+        Scanner LadoTi = new Scanner (System.in);
+        int OpTriangulo = 0;
+        int BaseTriangulo = 0;
+        int AltTriangulo = 0;
+        int LadoTriangulo = 0;
+        int AreaTri = 0;
+        int PerimetroTri = 0;
+        int ResultTri = 0;
+        
+        
+        //Menu
+        System.out.println("Bienvenido....");
+        System.out.println("Elige una figura: ");
+        System.out.println("Cuadrado..........1");
+        System.out.println("Circulo...........2");
+        System.out.println("Triangulo.........3");
+        Opfig = Op1.nextInt();
+        
+        
+        //Cuadrado
+        if (Opfig == 1) {
+            
+            //Datos Cuadrado
+            System.out.println("Ingresa los datos ");
+            System.out.println("Lado: ");
+            Lado = LadoCu.nextInt();
+            
+            //Operacion
+            System.out.println("¿Que dato quieres calcular? ");
+            System.out.println("Area..........1");
+            System.out.println("Perimetro.....2");
+            OpCuadrado = OpCu.nextInt();
+            
+            //Opcion 1
+            if (OpCuadrado == 1) {
+                
+                AreaCuadrado = Lado * Lado;
+                ResultCuadrado = AreaCuadrado;
+                
+            }
+            
+            //Opcion 2
+            if (OpCuadrado == 2) {
+                
+                PerimetroCuadrado = Lado * 4;
+                ResultCuadrado = PerimetroCuadrado;
+                
+            }
+            
+            System.out.println("El resultado es: " +ResultCuadrado);
+            
+        }
+        
+        //Circulo
+        if (Opfig == 2) {
+            
+            //Datos Triangulo
+            System.out.println("Ingresa los datos: ");
+            System.out.println("Radio: ");
+            Radio = RadioCi.nextInt();
+            
+            //Operacion
+            System.out.println("¿Que dato quieres calcular? ");
+            System.out.println("Area...............1");
+            System.out.println("Circunferencia.....2");
+            OpCirculo = OpCi.nextInt();
+            
+            //Opcion 1
+            if (OpCirculo == 1) {
+               
+                AreaCirculo = (int) (Radio * Math.PI);
+                ResultCirculo = AreaCirculo;
+                
+            }
+            
+            //Opcion 2
+            if (OpCirculo == 2) {
+                
+                Circunferencia = Radio * Radio;
+                ResultCirculo = Circunferencia;
+                
+            }
+            
+            System.out.println("El resultado es: " +ResultCirculo);
+            
+        }
+        
+        //Triangulo
+        if (Opfig == 3) {
+            
+            //Datos Triangulo
+            System.out.println("Ingresa los datos: ");
+            System.out.println("Base: ");
+            BaseTriangulo = BaseTi.nextInt();
+            
+            System.out.println("Altura: ");
+            AltTriangulo = AlturaTi.nextInt();
+            
+            System.out.println("Lado: ");
+            LadoTriangulo = LadoTi.nextInt();
+            
+            
+            //Operacion 
+            System.out.println("¿Que dato quieres calcular? ");
+            System.out.println("Area..........1");
+            System.out.println("Perimetro.....2");
+            OpTriangulo = OpTr.nextInt();
+            
+            
+            //Opcion 1
+            if (OpTriangulo == 1) {
+                
+                AreaTri = (BaseTriangulo * AltTriangulo)/2;
+                ResultTri = AreaTri;
+                
+            }
+            
+            
+            //Opcion 2
+            if (OpTriangulo == 2) {
+                
+                PerimetroTri = BaseTriangulo + LadoTriangulo + LadoTriangulo;
+                ResultTri = PerimetroTri;
+                
+            }
+            
+            System.out.println("El resultado es: " +ResultTri);
+        
+        }
+    }   
+}
