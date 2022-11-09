@@ -1,0 +1,75 @@
+package actividades.de.clase;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class Operacion_Act12 {
+    @SuppressWarnings("empty-statement")
+    public static void main (String[] args){
+        
+        Scanner OP1 = new Scanner (System.in);
+        Scanner B1 = new Scanner (System.in);
+        int Op1 = 0;
+        int BOP1 = 0;
+        
+        
+        List<Integer> Contactos;
+        Contactos = new ArrayList<>();
+              
+        Contactos.add(1);
+        
+        //Datos Crear
+        Scanner Dato1 = new Scanner (System.in);
+        String DT1 = null;
+        int DT2 = 0;
+        
+        
+        String [] Nombres = new String [2];
+         
+        
+        
+        System.out.println("Bienvenido....");
+        System.out.println("¿Que quieres hacer? ");
+        System.out.println("Crear un dato en la lista..........1");
+        System.out.println("Borrar un dato de la lista.........2");
+        System.out.println("Mostrar lista completa.............3");
+        Op1 = OP1.nextInt();
+        
+        
+        //Crear
+        if (Op1 == 1) {
+            DT1 = JOptionPane.showInputDialog("Escribe el nombre: ");
+            DT2 = Integer.parseInt(JOptionPane.showInputDialog("Escribe el nombre:"));
+            
+            
+            Nombres[0] = DT1;
+            Contactos.add(DT2);
+            
+            
+            System.out.println("Se guardo como dato 1");
+            
+        }
+        
+        //Borrar
+        if (Op1 == 2) {
+            
+            BOP1 = Integer.parseInt(JOptionPane.showInputDialog("¿Quieres borrar el dato 1?"));
+            
+            if (BOP1 == 1) {
+                
+                Contactos.remove(0);
+                
+            }   
+        }
+
+         //Lista
+        if (Op1 == 3) {
+            
+            System.out.println(Contactos);
+            
+        }
+        
+    }
+}
