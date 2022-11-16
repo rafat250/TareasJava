@@ -1,0 +1,95 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+
+public class Operaciones_Act13 {
+    public static void main (String[] args){
+        
+        
+        
+        
+        
+        //Clase anonima
+        new ClaseAnonima(){
+            public static void main (String[] args){
+                                
+                List<String> TextoAnom;
+        
+                TextoAnom = new ArrayList(10);
+        
+                TextoAnom.add("Ana");
+                TextoAnom.add("Juan");
+                TextoAnom.add("Benito");
+                TextoAnom.add("Angel");
+                TextoAnom.add("Miguel");
+                TextoAnom.add("Patricio");
+                TextoAnom.add("Fransisco");
+                TextoAnom.add("Daniel");
+                TextoAnom.add("Dafne");
+                TextoAnom.add("Maria");
+        
+                
+                //Alfabetico
+                System.out.println("Orden alfabetico en clase anonima");
+                Collections.sort(TextoAnom);
+                
+                //Longitud
+                System.out.println("Orden por longitud en clase anonima");
+                Collections.sort(TextoAnom);
+            }
+        };
+        
+        //Expresion lamba
+        List<String> TextoLamba;
+        
+        TextoLamba = new ArrayList(10);
+        
+        TextoLamba.add("Ana");
+        TextoLamba.add("Juan");
+        TextoLamba.add("Benito");
+        TextoLamba.add("Angel");
+        TextoLamba.add("Miguel");
+        TextoLamba.add("Patricio");
+        TextoLamba.add("Fransisco");
+        TextoLamba.add("Daniel");
+        TextoLamba.add("Dafne");
+        TextoLamba.add("Maria");
+        
+        
+        //Alfabetico
+        System.out.println("Orden alfabetico con expresion Lamba... ");
+        TextoLamba.forEach(Lis ->  Collections.sort(TextoLamba));
+        
+        //Longitud
+        System.out.println("Orden por longitud con expresion Lamba....");
+        Collections.sort(TextoLamba);
+  
+        
+        //Metodo de referencia 
+        List<String> TextoRefer;
+        
+        TextoRefer = new ArrayList(10);
+        
+        TextoRefer.add("Ana");
+        TextoRefer.add("Juan");
+        TextoRefer.add("Benito");
+        TextoRefer.add("Angel");
+        TextoRefer.add("Miguel");
+        TextoRefer.add("Patricio");
+        TextoRefer.add("Fransisco");
+        TextoRefer.add("Daniel");
+        TextoRefer.add("Dafne");
+        TextoRefer.add("Maria");
+        
+        //Alfabetico
+        System.out.println("Orden alfabetico con metodo de referencia");
+        TextoRefer.forEach(System.out::println);
+        Collections.sort(TextoRefer);
+        
+        //Longitud
+        System.out.println("Orden por longitud con metodo de referencia");
+        Collections.sort(TextoRefer);
+        
+    }  
+}
